@@ -1,12 +1,12 @@
+import { motion } from "framer-motion";
 import Header from "./components/Header";
 import Hero from './pages/Hero';
 import About from "./pages/About";
-import Features from "./pages/Features";
 import Footer from "./components/Footer";
-import { motion } from "framer-motion";
 import Services from "./pages/Services";
 import Team from "./pages/Team";
 import Prices from "./pages/Prices";
+import Contact from "./pages/Contact";
 
 const App = () => {
 	return (
@@ -21,9 +21,9 @@ const App = () => {
 				<Hero />
 				<About />
 				<Services />
-				<Features />
 				<Team />
 				<Prices />
+				<Contact />
 			</main>
 			<Footer />
 		</motion.div>	
