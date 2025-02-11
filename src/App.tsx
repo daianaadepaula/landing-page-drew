@@ -5,6 +5,8 @@ import Features from "./pages/Features";
 import Footer from "./components/Footer";
 import { motion } from "framer-motion";
 import Services from "./pages/Services";
+import Team from "./pages/Team";
+import Prices from "./pages/Prices";
 
 const App = () => {
 	return (
@@ -20,6 +22,8 @@ const App = () => {
 				<About />
 				<Services />
 				<Features />
+				<Team />
+				<Prices />
 			</main>
 			<Footer />
 		</motion.div>	
