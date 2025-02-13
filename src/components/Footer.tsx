@@ -1,5 +1,4 @@
 import { BiLogoDribbble, BiLogoFacebookCircle, BiLogoGithub, BiLogoInstagramAlt, BiLogoLinkedinSquare, BiLogoTwitter } from "react-icons/bi"
-import useTheme from "../hooks/useTheme";
 import FooterSection from "./FooterSection";
 import { FooterFollowUs, FooterInfo, FooterLinks } from "./FooterSection";
 import LogoDark from "../assets/logo-dark.svg";
@@ -7,19 +6,16 @@ import LogoLight from "../assets/logo-light.svg";
 
 
 const Footer = () => {
-	const { theme } = useTheme();
-
 	return (
 		<footer className="p-4 bg-white sm:p-6 dark:bg-gray-800">
       <div className="mx-auto max-w-screen-xl pt-3 pb-3">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="#" className="flex items-center">
-              <img
-								src={theme === "dark" ? LogoDark : LogoLight}
-								className="w-32 h-auto"
-								alt="Drew Logo"
-          		/>
+              <div className="w-32 h-auto">
+								<img src={LogoLight} className="block dark:hidden" alt="Drew Logo Light" />
+								<img src={LogoDark} className="hidden dark:block" alt="Drew Logo Dark" />
+							</div>
             </a>
           </div>
 					<div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
